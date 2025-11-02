@@ -57,3 +57,22 @@
 /*----------------------------------------------------
                 anything else down here
 ------------------------------------------------------*/
+
+/* Custom Hollow Knight background fix */
+.theme-dark,
+.theme-light {
+  background: none !important;
+}
+
+body,
+.appMount_fae9dd,
+.bg_d4b6c5,
+.bg__12180 {
+  background-image: url("https://raw.githubusercontent.com/notakidoo/HK-Image-/refs/heads/main/Hollow%20Knight_%20Silksong%204K%20Wallpaper.jpg") !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+  filter: brightness(0.95) saturate(1.05);
+}
+
