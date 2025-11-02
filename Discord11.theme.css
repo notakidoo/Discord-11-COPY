@@ -37,14 +37,13 @@
             and enable Transparency in BD Settings]
 ---------------------------------------------------------------*/
 /*--Yes you can enable/disable this--*/
-
-@import url(https://zuzumi-f.github.io/Discord-11/release/glasseffect.css); */
+@import url(https://zuzumi-f.github.io/Discord-11/release/glasseffect.css);
 
 /*--------------------------------------------------------------
                            Settings
 ---------------------------------------------------------------*/
 :root {
-    --wallpaper-is: "https://raw.githubusercontent.com/notakidoo/HK-Image-/refs/heads/main/Hollow%20Knight_%20Silksong%204K%20Wallpaper.jpg"; /* Write the image url, example url("your url") [none is default]*/
+    --wallpaper-is: url("https://raw.githubusercontent.com/notakidoo/HK-Image-/refs/heads/main/Hollow%20Knight_%20Silksong%204K%20Wallpaper.jpg");
     --blur-size: 24px; /* Amount of blur in pixels [24px is default] */
     --opacity-thing: 0.6; /* Value from 0 to 1 [0.6 is default] */
     --server-size: 48px; /* The size of the server icons [48px is default] */
