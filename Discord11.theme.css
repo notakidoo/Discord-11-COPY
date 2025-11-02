@@ -43,7 +43,7 @@
                            Settings
 ---------------------------------------------------------------*/
 :root {
-    --wallpaper-is: none; /* Write the image url, example url("your url") [none is default]*/
+    --wallpaper-is: "https://raw.githubusercontent.com/notakidoo/HK-Image-/refs/heads/main/Hollow%20Knight_%20Silksong%204K%20Wallpaper.jpg"; /* Write the image url, example url("your url") [none is default]*/
     --blur-size: 24px; /* Amount of blur in pixels [24px is default] */
     --opacity-thing: 0.6; /* Value from 0 to 1 [0.6 is default] */
     --server-size: 48px; /* The size of the server icons [48px is default] */
