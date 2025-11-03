@@ -1,0 +1,147 @@
+/**
+ * @name Hollow Knight Fusion
+ * @author rich kalina
+ * @version 1.0
+ * @description A hybrid of FrostedGlass & HollowDiscord: dark, soft blur, and Hollow Knight accents.
+ * @base https://discordstyles.github.io/FrostedGlass/
+ */
+
+@import url("https://discordstyles.github.io/FrostedGlass/dist/FrostedGlass.css");
+@import url("https://raw.githubusercontent.com/T0B0TR0N/HollowDiscord/main/statuspick.css");
+@import url("https://raw.githubusercontent.com/T0B0TR0N/HollowDiscord/main/bubble.css");
+@import url("https://raw.githubusercontent.com/T0B0TR0N/HollowDiscord/main/icons.css");
+@import url("https://raw.githubusercontent.com/T0B0TR0N/HollowDiscord/main/svg_replace.css");
+
+/*───────────────────────────────
+ 🦋  Global Variables
+───────────────────────────────*/
+:root {
+  /* Wallpaper */
+  --background-image: url("https://raw.githubusercontent.com/notakidoo/HK-Image-/refs/heads/main/Hollow%20Knight_%20Silksong%204K%20Wallpaper.jpg");
+  --background-image-blur: 6px;
+  --background-image-size: cover;
+  --background-image-position: center;
+  --popout-modal-image: var(--background-image);
+  --popout-modal-blur: 10px;
+  --popout-modal-size: cover;
+
+  /* HollowDiscord color system */
+  --var-accent: #1e1b38;
+  --var-black1: rgb(0 0 0 / 55%);
+  --var-black2: rgb(0 0 0 / 65%);
+  --var-notification: #B00020;
+
+  /* Brightness */
+  --serverlist-brightness: 0.75;
+  --left-brightness: 0.55;
+  --middle-brightness: 0.45;
+  --right-brightness: 0.4;
+  --popout-modal-brightness: 0.55;
+
+  /* Tint and rounding */
+  --window-roundness: 12px;
+  --tint-colour: 120,160,220;
+  --tint-brightness: 0.06;
+  --scrollbar-colour: rgba(200,200,255,0.08);
+  --link-colour: #a7c9ff;
+  --font: "Segoe UI Variable", "Segoe UI", sans-serif;
+
+  --update-notice-1: none;
+}
+
+/*───────────────────────────────
+ 🌫  Background & containment
+───────────────────────────────*/
+body {
+  background: var(--var-black2) no-repeat center/cover fixed;
+  background-image: var(--background-image);
+  background-attachment: fixed;
+  filter: brightness(0.95) contrast(1.05);
+}
+
+.bg_d4b6c5,
+.bg__12180,
+.appMount_fae9dd {
+  background: transparent !important;
+  background-image: none !important;
+  backdrop-filter: blur(var(--background-image-blur))
+                   brightness(0.95)
+                   saturate(1.05);
+}
+
+/* Soft vignette edge to visually stop the “extended wallpaper” */
+.appMount_fae9dd::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  box-shadow: inset 0 0 120px rgba(0,0,0,0.4);
+  z-index: 0;
+}
+
+/*───────────────────────────────
+ 🖤  Transparent panel layering
+───────────────────────────────*/
+.layer__2efaa,
+.container__037ed,
+.chat__52833,
+.sidebar_ded4b5,
+.container__5c7e7,
+.container_ca50b9,
+.nowPlayingColumn_f5023f {
+  background-color: var(--var-black1) !important;
+  backdrop-filter: blur(16px);
+  border-radius: var(--window-roundness);
+}
+
+/*───────────────────────────────
+ ✨  Accents & buttons
+───────────────────────────────*/
+.lookFilled__19298.colorBrand_b2253e,
+.lookFilled__19298.colorPrimary__6ed40,
+.bd-button {
+  background-color: var(--var-accent) !important;
+  transition: transform 80ms ease;
+}
+.lookFilled__19298.colorBrand_b2253e:hover,
+.lookFilled__19298.colorPrimary__6ed40:hover,
+.bd-button:hover {
+  transform: translateY(-1px);
+}
+.lookFilled__19298.colorBrand_b2253e:active,
+.lookFilled__19298.colorPrimary__6ed40:active,
+.bd-button:active {
+  transform: translateY(1px);
+}
+
+/*───────────────────────────────
+ 💬  Message bubbles
+───────────────────────────────*/
+.messageListItem__050f9 .message__80c10 {
+  background-color: var(--var-black1) !important;
+  border-radius: 10px;
+  margin: 2px 0;
+  padding: 6px 10px;
+  transition: background-color .15s ease;
+}
+.messageListItem__050f9 .message__80c10:hover {
+  background-color: var(--var-black2) !important;
+}
+
+/*───────────────────────────────
+ 🌟  Misc aesthetic tweaks
+───────────────────────────────*/
+::-webkit-scrollbar-thumb {
+  background-color: rgba(180,200,255,0.15) !important;
+  border-radius: 8px;
+}
+
+.title_a1c4b0,
+.headerText_c59ef5 {
+  color: #dce7ff !important;
+  text-shadow: 0 0 6px rgba(120,140,200,0.3);
+}
+
+.theme-dark .tooltipBrand__13fbc {
+  background-color: var(--var-accent);
+}
